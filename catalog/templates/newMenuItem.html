@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+		{% block content %}
+		<h1>New menu item</h1>
+		
+		<form method="POST">
+			<input name="name" placeholder="Name">
+			<textarea name="description" placeholder="Yummy description goes here.."></textarea>
+			<input name="price" placeholder="$0.00"type="number" class="input_price">
+			<select name="course">
+	  			<option value="Appetizer">Appetizer</option>
+	  			<option value="Entree">Entree</option>
+	  			<option value="Dessert">Dessert</option>
+	 			<option value="Beverage">Beverage</option>
+			</select>
+			<button>Submit</button>
+		</form>
+		<a href="{{url_for('restaurants')}}"> Cancel</a>
+
+		{% endblock %}
+
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+		{% block content %}
+		<a href="{{url_for('gdisconnect')}}"> Logout</a><br>
+		<a href="{{url_for('newRestaurant')}}" class="add_button"> + Restaurant</a>
+		{% for restaurant in restaurants %}
+
+		<div>
+			
+			{% for creator in creators %}
+			{% if creator.id == restaurant.user_id %}
+			<img src="{{creator.picture}}" class="dp">
+			{% endif %}
+			{% endfor %}
+			<a href="{{url_for('restaurantMenu', restaurant_id = restaurant.id)}}"><h1>{{restaurant.name}}</h1></a>
+
+			{% if current_user == restaurant.user_id %}
+			<a href="{{url_for('editRestaurant', restaurant_id= restaurant.id)}}" class="edit_button"> Edit</a>
+			<a href="{{url_for('deleteRestaurant', restaurant_id= restaurant.id)}}" class="delete_button"> Delete</a>
+			
+			{% endif %}
+			<hr>
+
+		</div>
+		{% endfor %}
+		{% endblock %}

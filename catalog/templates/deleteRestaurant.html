@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+		
+		{% block content %}
+		{% if current_user == restaurant.user_id %}
+		<h1> Delete {{restaurant.name}}?</h1>
+		<form method="POST">
+			<button>Confirm</button>
+		</form>
+		<a href="{{url_for('restaurants')}}"> Cancel</a>
+		{% else %}
+			<h3 class="errMsg"> You cannot delete an entry you don't own</h3>
+			<a href="{{url_for('restaurants')}}"> Go home</a>
+		{% endif %}
+		{% endblock %}
+		
+

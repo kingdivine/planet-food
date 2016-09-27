@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+		<link href="https://fonts.googleapis.com/css?family=David+Libre|Josefin+Sans|Raleway|Roboto|Space+Mono|Droid+Sans|Raleway+Dots"
+		 rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<a href="{{url_for('restaurants')}}"><img src="/static/color.png"></a><br>
+			<a href="{{url_for('restaurants')}}" class="site_header">Planet Food</a><br>
+			{% block content %}
+			{% endblock %}
+			<footer>
+				<h4> Made By Divine A, 2016</h4>
+			</footer>
+		</div>
+	</body>	
+</html>
