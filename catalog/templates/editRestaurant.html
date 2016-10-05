@@ -4,7 +4,7 @@
 		{% if current_user == restaurant.user_id %}
 		<h1> Edit Restaurant</h1>
 		<form method="POST">
-			<input name="name" placeholder="{{restaurant.name}}">
+			<input name="name" value="{{restaurant.name}}">
 			<button>Resubmit</button>
 		</form>
 

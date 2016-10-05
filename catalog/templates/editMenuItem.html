@@ -4,9 +4,9 @@
 		{% if current_user == menuItem.user_id %}
 		<h1>Edit Item</h1>
 		<form method="POST">
-			<input name="name" placeholder="{{menuItem.name}}">
+			<input name="name" value="{{menuItem.name}}">
 			<textarea name="description"> {{menuItem.description}}</textarea>
-			<input name="price" type="number" placeholder="{{menuItem.price}}" class="input_price">
+			<input name="price" type="number" value="{{menuItem.price}}" class="input_price">
 			<select name="course">
 	  			<option value="Appetizer">Appetizer</option>
 	  			<option value="Entree">Entree</option>
